@@ -11,10 +11,10 @@ public class LabNumber2 {
 		double perimeter;
 		double volume;
 		String ifContinue;
-
+		Scanner scnr = new Scanner(System.in);
 		System.out.println("Welcome to Grand Circus's room Detail Generator!");
 		do {
-			Scanner scnr = new Scanner(System.in);
+			
 			// prompt the user to enter value of length
 			System.out.println("Enter Length: ");
 			length = scnr.nextDouble();
@@ -23,6 +23,7 @@ public class LabNumber2 {
 			width = scnr.nextDouble();
 			System.out.println("Enter Height: ");
 			height = scnr.nextDouble();
+			scnr.nextLine();
 
 			// calculate the area
 			area = length * width;
@@ -36,9 +37,10 @@ public class LabNumber2 {
             
 			// ask if the user wants to continue
 			System.out.println("Continue?(y/n): ");
-			ifContinue = scnr.next();
-			scnr.close();
+			ifContinue = scnr.nextLine();
+		
+		
 		} while (ifContinue.equalsIgnoreCase("y"));
-	
+		scnr.close();
 	}
 }
